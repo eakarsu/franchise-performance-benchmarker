@@ -1,0 +1,30 @@
+{
+  "id": "franchise-performance-benchmarker",
+  "title": "Franchise Performance Benchmarker App",
+  "industry": "Sales, Marketing & CRM",
+  "industryId": "sales-marketing-crm",
+  "specialization": "Franchise Performance Benchmarker",
+  "sourcePlatformGroup": "sales-marketing-crm-platform",
+  "sources": [
+    "AIDatabaseAdminAgent",
+    "AIFranchisePerformanceBenchmarker",
+    "AISocialProofGenerator",
+    "multiLocationFranchise"
+  ],
+  "featureCount": 309,
+  "candidateFeatureCount": 395,
+  "eliminatedSimilarFeatures": 86,
+  "evidenceCount": 725,
+  "aiPageCount": 0,
+  "sourceAIPageCount": 0,
+  "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
+  "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
+  "database": "database.sqlite",
+  "databaseSeed": {
+    "seededProjects": 2,
+    "seededTables": 9,
+    "seededRows": 138
+  },
+  "visibleFeatureCount": 31,
+  "featureVisibilityMode": "seeded-or-ai"
+}
