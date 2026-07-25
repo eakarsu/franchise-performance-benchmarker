@@ -24,44 +24,152 @@
     ]
   },
   {
-    "name": "AI Advisors",
-    "canonicalKey": "advisor ai",
-    "aliases": [],
+    "name": "Actions",
+    "canonicalKey": "action",
+    "aliases": [
+      "Action"
+    ],
     "kinds": [
-      "navigation",
+      "api"
+    ],
+    "routes": [
+      "/:id/action",
+      "/actions"
+    ],
+    "sourceProjects": [
+      "AIFranchisePerformanceBenchmarker",
+      "ai-sales-outreach"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/car-dealership-sales-optimizer",
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "ai-sales-outreach",
+        "path": "backend/src/routes/replyClassifier.ts:157",
+        "route": "/:id/action",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/routes/governedPerformance.js:63",
+        "route": "/actions",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Agents New",
+    "canonicalKey": "agent",
+    "aliases": [
+      "Agents",
+      "Agents New Page",
+      "Agents Page"
+    ],
+    "kinds": [
+      "api",
       "page"
     ],
     "routes": [
-      "/AIAdvisors"
+      "/AgentsNewPage",
+      "/AgentsPage",
+      "/agents",
+      "/agents-new"
     ],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "AIDatabaseAdminAgent",
+      "AiCustomerSupportAgent"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/customer-support-agent",
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/App.js:54",
+        "route": "/agents",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/components/Sidebar.js:11",
+        "route": "/agents",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/App.js:55",
+        "route": "/agents-new",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/components/Sidebar.js:12",
+        "route": "/agents-new",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/pages/AgentsNewPage.js",
+        "route": "/AgentsNewPage",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/pages/AgentsPage.js",
+        "route": "/AgentsPage",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCustomerSupportAgent",
+        "path": "backend/src/routes/analytics.js:113",
+        "route": "/agents",
+        "originApp": "sales-marketing-crm/customer-support-agent"
+      }
+    ]
+  },
+  {
+    "name": "Aggregate Reviews",
+    "canonicalKey": "aggregate review",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/aggregate-reviews"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
       {
-        "kind": "navigation",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:81",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/AIAdvisors.js",
-        "route": "/AIAdvisors",
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/ai.js:1242",
+        "route": "/aggregate-reviews",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
   },
   {
-    "name": "AI Agents",
+    "name": "AI Agents New",
     "canonicalKey": "agent ai",
     "aliases": [
-      "AI Agents New"
+      "AI Agents"
     ],
     "kinds": [
       "navigation"
@@ -203,138 +311,25 @@
     ]
   },
   {
-    "name": "Advisors",
-    "canonicalKey": "advisor",
+    "name": "Alert Record",
+    "canonicalKey": "alert record",
     "aliases": [],
     "kinds": [
-      "page"
+      "model"
     ],
-    "routes": [
-      "/ai/advisors"
-    ],
+    "routes": [],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "AIFranchisePerformanceBenchmarker"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
       {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:189",
-        "route": "/ai/advisors",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:81",
-        "route": "/ai/advisors",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Agents New",
-    "canonicalKey": "agent",
-    "aliases": [
-      "Agents",
-      "Agents New Page",
-      "Agents Page"
-    ],
-    "kinds": [
-      "api",
-      "page"
-    ],
-    "routes": [
-      "/AgentsNewPage",
-      "/AgentsPage",
-      "/agents",
-      "/agents-new"
-    ],
-    "sourceProjects": [
-      "AIDatabaseAdminAgent",
-      "AiCustomerSupportAgent"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/customer-support-agent",
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/App.js:54",
-        "route": "/agents",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/components/Sidebar.js:11",
-        "route": "/agents",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiCustomerSupportAgent",
-        "path": "backend/src/routes/analytics.js:113",
-        "route": "/agents",
-        "originApp": "sales-marketing-crm/customer-support-agent"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/App.js:55",
-        "route": "/agents-new",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/components/Sidebar.js:12",
-        "route": "/agents-new",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/pages/AgentsNewPage.js",
-        "route": "/AgentsNewPage",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/pages/AgentsPage.js",
-        "route": "/AgentsPage",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Aggregate Reviews",
-    "canonicalKey": "aggregate review",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/aggregate-reviews"
-    ],
-    "sourceProjects": [
-      "AISocialProofGenerator"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "backend/routes/ai.js:1242",
-        "route": "/aggregate-reviews",
+        "kind": "model",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/models/AlertRecord.js",
+        "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -359,44 +354,8 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:349",
+        "path": "server/index.js:342",
         "route": "/api/ai/alert-scan",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Alerts Page",
-    "canonicalKey": "alert",
-    "aliases": [
-      "Alert Record"
-    ],
-    "kinds": [
-      "model",
-      "page"
-    ],
-    "routes": [
-      "/AlertsPage"
-    ],
-    "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "model",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/models/AlertRecord.js",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/pages/AlertsPage.jsx",
-        "route": "/AlertsPage",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -474,28 +433,28 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:71",
+        "path": "frontend/src/components/Sidebar.jsx:70",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:169",
+        "path": "frontend/src/App.jsx:161",
         "route": "/announcements",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:71",
+        "path": "frontend/src/components/Sidebar.jsx:70",
         "route": "/announcements",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Announcements.js",
+        "path": "frontend/src/pages/Announcements.jsx",
         "route": "/Announcements",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -538,8 +497,7 @@
       "/anomaly-detection"
     ],
     "sourceProjects": [
-      "AIDatabaseAdminAgent",
-      "multiLocationFranchise"
+      "AIDatabaseAdminAgent"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
@@ -549,13 +507,6 @@
         "kind": "api",
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "backend/routes/agentsNew.js:624",
-        "route": "/anomaly-detection",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:646",
         "route": "/anomaly-detection",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -607,7 +558,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:396",
+        "path": "server/index.js:389",
         "route": "/api/ai/anomaly-scan",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -642,7 +593,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/ApprovedVendors.js",
+        "path": "frontend/src/pages/ApprovedVendors.jsx",
         "route": "/ApprovedVendors",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -664,54 +615,31 @@
       "/audit",
       "/audits",
       "/compliance/audit",
-      "/gap-features/_audit",
       "/operations/audits"
     ],
     "sourceProjects": [
+      "AIDatabaseAdminAgent",
       "AIFranchisePerformanceBenchmarker",
       "AiCodeReviewDocumentation",
-      "multiLocationFranchise",
-      "referral"
+      "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
-      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/franchise-performance-benchmarker",
       "sales-marketing-crm/review-response-manager"
     ],
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "referral",
-        "path": "server/routes/gap-features.js:122",
-        "route": "/gap-features/_audit",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/dependencyAudit.js:10",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "backend/routes/governedWorkflow.js:190",
         "route": "/audit",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/dependencyAudit.js:141",
-        "route": "/:id/audit",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "server/routes/extensions.js:314",
         "route": "/compliance/audit",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/brandComplianceVision.js:9",
-        "route": "/audit",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
@@ -731,37 +659,51 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:54",
+        "path": "frontend/src/components/Sidebar.jsx:53",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:149",
+        "path": "frontend/src/App.jsx:141",
         "route": "/operations/audits",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:54",
+        "path": "frontend/src/components/Sidebar.jsx:53",
         "route": "/operations/audits",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:115",
+        "path": "frontend/src/pages/Dashboard.jsx:115",
         "route": "/operations/audits",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:124",
+        "path": "frontend/src/pages/Dashboard.jsx:124",
         "route": "/operations/audits",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/dependencyAudit.js:10",
+        "route": "/audit",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/dependencyAudit.js:141",
+        "route": "/:id/audit",
+        "originApp": "sales-marketing-crm/review-response-manager"
       }
     ]
   },
@@ -993,7 +935,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:448",
+        "path": "server/index.js:441",
         "route": "/api/ai/benchmark-recompute",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -1024,16 +966,18 @@
     ]
   },
   {
-    "name": "Benchmarking",
-    "canonicalKey": "benchmarking",
+    "name": "Benchmarks",
+    "canonicalKey": "benchmark",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/benchmarking"
+      "/benchmarks",
+      "/cycles/:cycleId/benchmark"
     ],
     "sourceProjects": [
+      "AIFranchisePerformanceBenchmarker",
       "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
@@ -1042,30 +986,11 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:351",
-        "route": "/benchmarking",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/routes/governedPerformance.js:52",
+        "route": "/cycles/:cycleId/benchmark",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Benchmarks",
-    "canonicalKey": "benchmark",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/benchmarks"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
+      },
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
@@ -1102,7 +1027,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:576",
+        "path": "server/index.js:569",
         "route": "/api/ai/best-practice-extraction",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -1133,13 +1058,6 @@
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:506",
-        "route": "/best-practices",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
         "path": "backend/src/routes/metadata.js:204",
         "route": "/categories/best-practices",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
@@ -1161,28 +1079,28 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:56",
+        "path": "frontend/src/components/Sidebar.jsx:55",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:157",
+        "path": "frontend/src/App.jsx:149",
         "route": "/operations/best-practices",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:56",
+        "path": "frontend/src/components/Sidebar.jsx:55",
         "route": "/operations/best-practices",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/BestPractices.js",
+        "path": "frontend/src/pages/BestPractices.jsx",
         "route": "/BestPractices",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -1243,7 +1161,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/BrandGuidelines.js",
+        "path": "frontend/src/pages/BrandGuidelines.jsx",
         "route": "/BrandGuidelines",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -1267,7 +1185,7 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:41",
+        "path": "frontend/src/components/Sidebar.jsx:40",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -1305,68 +1223,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "backend/routes/multiModalWidgets.js:41",
         "route": "/build",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Bulk Offer",
-    "canonicalKey": "bulk offer",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/bulk-offer"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/vendorMarketplace.js:22",
-        "route": "/bulk-offer",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Calculate",
-    "canonicalKey": "calculate",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/calculate",
-      "/momentum/calculate"
-    ],
-    "sourceProjects": [
-      "ai-sales-outreach",
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/car-dealership-sales-optimizer",
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "ai-sales-outreach",
-        "path": "backend/src/routes/momentum.ts:218",
-        "route": "/momentum/calculate",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/multiCurrencyRoyalty.js:32",
-        "route": "/calculate",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -1766,32 +1622,6 @@
     ]
   },
   {
-    "name": "Cf Franchisee Certification Lms With AI Proctoring",
-    "canonicalKey": "ai certification cf franchisee lms proctoring with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfFranchiseeCertificationLmsWithAiProctoring"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfFranchiseeCertificationLmsWithAiProctoring.jsx",
-        "route": "/CfFranchiseeCertificationLmsWithAiProctoring",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Cf Franchisee Peer Mentoring Marketplace Wi",
     "canonicalKey": "cf franchisee marketplace mentoring peer wi",
     "aliases": [],
@@ -1826,86 +1656,8 @@
     ]
   },
   {
-    "name": "Cf Marketing Spend Attribution Across Locations And",
-    "canonicalKey": "across and attribution cf locations marketing spend",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfMarketingSpendAttributionAcrossLocationsAnd"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfMarketingSpendAttributionAcrossLocationsAnd.jsx",
-        "route": "/CfMarketingSpendAttributionAcrossLocationsAnd",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Cf Mobile App For Franchisees With Daily",
-    "canonicalKey": "cf daily for franchisees mobile with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfMobileAppForFranchiseesWithDaily"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfMobileAppForFranchiseesWithDaily.jsx",
-        "route": "/CfMobileAppForFranchiseesWithDaily",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Cf Multi Currency Royalty Automation With Fx",
-    "canonicalKey": "automation cf currency fx multi royalty with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfMultiCurrencyRoyaltyAutomationWithFx"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfMultiCurrencyRoyaltyAutomationWithFx.jsx",
-        "route": "/CfMultiCurrencyRoyaltyAutomationWithFx",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Cf Multi Modal Proof Widgets Combining Video Audio",
-    "canonicalKey": "audio cf combining modal multi proof video widgets",
+    "canonicalKey": "audio cf combining modal multi proof video widget",
     "aliases": [],
     "kinds": [
       "page"
@@ -1931,7 +1683,7 @@
   },
   {
     "name": "Cf Multi Modal Proof Widgets Combining Video Audio Text With",
-    "canonicalKey": "audio cf combining modal multi proof text video widgets with",
+    "canonicalKey": "audio cf combining modal multi proof text video widget with",
     "aliases": [],
     "kinds": [
       "page"
@@ -2220,7 +1972,7 @@
   },
   {
     "name": "Cf Sentiment Driven Variant Generation Tuned To Buyer Personas Price Conscious",
-    "canonicalKey": "buyer cf conscious driven generation personas price sentiment to tuned variant",
+    "canonicalKey": "buyer cf conscious driven generation persona price sentiment to tuned variant",
     "aliases": [],
     "kinds": [
       "page"
@@ -2281,58 +2033,6 @@
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "client/src/pages/CfSupplierBulkBuyAdvisorAggregatingPu.jsx",
         "route": "/CfSupplierBulkBuyAdvisorAggregatingPu",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Cf Vendor Marketplace With Bulk Discount Negotiation",
-    "canonicalKey": "bulk cf discount marketplace negotiation vendor with",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfVendorMarketplaceWithBulkDiscountNegotiation"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfVendorMarketplaceWithBulkDiscountNegotiation.jsx",
-        "route": "/CfVendorMarketplaceWithBulkDiscountNegotiation",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Cf Vision Based Brand Compliance Audit Mystery",
-    "canonicalKey": "audit based brand cf compliance mystery vision",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/CfVisionBasedBrandComplianceAuditMystery"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/CfVisionBasedBrandComplianceAuditMystery.jsx",
-        "route": "/CfVisionBasedBrandComplianceAuditMystery",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2424,22 +2124,58 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:53",
+        "path": "frontend/src/components/Sidebar.jsx:52",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:145",
+        "path": "frontend/src/App.jsx:137",
         "route": "/operations/checklists",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:53",
+        "path": "frontend/src/components/Sidebar.jsx:52",
         "route": "/operations/checklists",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Commands",
+    "canonicalKey": "command",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/leads/:id/commands",
+      "/sources/:id/commands"
+    ],
+    "sourceProjects": [
+      "ai-sales-outreach",
+      "multiLocationFranchise"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/car-dealership-sales-optimizer",
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "ai-sales-outreach",
+        "path": "backend/src/routes/governedOutreach.ts:88",
+        "route": "/sources/:id/commands",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "multiLocationFranchise",
+        "path": "backend/src/routes/revenue.js:169",
+        "route": "/leads/:id/commands",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2462,7 +2198,7 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:69",
+        "path": "frontend/src/components/Sidebar.jsx:68",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -2488,32 +2224,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:161",
         "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Compliance Check",
-    "canonicalKey": "check compliance",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/compliance-check"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:419",
-        "route": "/compliance-check",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2579,39 +2289,6 @@
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "server/models/ComplianceRecord.js",
         "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Compliance Rules",
-    "canonicalKey": "compliance rule",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/compliance-rules"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/customViews.js:157",
-        "route": "/compliance-rules",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/customViews.js:161",
-        "route": "/compliance-rules",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2716,39 +2393,6 @@
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "backend/routes/costOptimize.js:58",
         "route": "/cost-optimize",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Courses",
-    "canonicalKey": "course",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/courses"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/franchiseeLms.js:10",
-        "route": "/courses",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/franchiseeLms.js:17",
-        "route": "/courses",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2873,17 +2517,17 @@
     ]
   },
   {
-    "name": "Daily Briefing",
-    "canonicalKey": "briefing daily",
+    "name": "Cycles",
+    "canonicalKey": "cycle",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/daily-briefing"
+      "/cycles"
     ],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "AIFranchisePerformanceBenchmarker"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
@@ -2891,9 +2535,16 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/mobileBriefing.js:9",
-        "route": "/daily-briefing",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/routes/governedPerformance.js:15",
+        "route": "/cycles",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/routes/governedPerformance.js:22",
+        "route": "/cycles",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -2930,8 +2581,7 @@
       "ai-customer-implementation-success-manager",
       "ai-sales-outreach",
       "leads",
-      "multiLocationFranchise",
-      "referral"
+      "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/car-dealership-sales-optimizer",
@@ -2941,48 +2591,6 @@
       "sales-marketing-crm/review-response-manager"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/analytics.ts:75",
-        "route": "/dashboard",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "frontend/src/pages/Dashboard.tsx",
-        "route": "/Dashboard",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "leads",
-        "path": "app/dashboard/page.tsx",
-        "route": "/dashboard",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "leads",
-        "path": "components/DashboardLayout.tsx:104",
-        "route": "/dashboard",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "referral",
-        "path": "client/src/components/Sidebar.jsx:8",
-        "route": "",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/pages/Dashboard.jsx",
-        "route": "/Dashboard",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
       {
         "kind": "api",
         "sourceProject": "AICarDealershipSalesOptimizer",
@@ -3026,53 +2634,32 @@
         "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
       },
       {
-        "kind": "navigation",
-        "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "frontend/src/components/Sidebar.js:5",
-        "route": "",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "frontend/src/App.js:51",
-        "route": "/dashboard",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "frontend/src/components/Sidebar.js:5",
-        "route": "/dashboard",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIGrantWriter",
-        "path": "frontend/src/pages/Dashboard.js",
-        "route": "/Dashboard",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIReviewResponseManager",
-        "path": "frontend/src/pages/Dashboard.js",
-        "route": "/Dashboard",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
         "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/metrics.js:16",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "backend/src/routes/analytics.ts:75",
         "route": "/dashboard",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "page",
-        "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "frontend/src/pages/DashboardPage.js",
-        "route": "/DashboardPage",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "sourceProject": "aIMarketingAutomation",
+        "path": "frontend/src/pages/Dashboard.tsx",
+        "route": "/Dashboard",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "leads",
+        "path": "app/dashboard/page.tsx",
+        "route": "/dashboard",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "leads",
+        "path": "components/DashboardLayout.tsx:19",
+        "route": "/dashboard",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "navigation",
@@ -3126,28 +2713,28 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:25",
+        "path": "frontend/src/components/Sidebar.jsx:25",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:101",
+        "path": "frontend/src/App.jsx:93",
         "route": "/dashboard",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:25",
+        "path": "frontend/src/components/Sidebar.jsx:25",
         "route": "/dashboard",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js",
+        "path": "frontend/src/pages/Dashboard.jsx",
         "route": "/Dashboard",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -3157,6 +2744,55 @@
         "path": "frontend/src/pages/DashboardPage.js",
         "route": "/DashboardPage",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "frontend/src/components/Sidebar.js:5",
+        "route": "",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "frontend/src/App.js:41",
+        "route": "/dashboard",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "frontend/src/components/Sidebar.js:5",
+        "route": "/dashboard",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIGrantWriter",
+        "path": "frontend/src/pages/Dashboard.js",
+        "route": "/Dashboard",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIReviewResponseManager",
+        "path": "frontend/src/pages/Dashboard.js",
+        "route": "/Dashboard",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/metrics.js:16",
+        "route": "/dashboard",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "frontend/src/pages/DashboardPage.js",
+        "route": "/DashboardPage",
+        "originApp": "sales-marketing-crm/review-response-manager"
       },
       {
         "kind": "page",
@@ -3196,13 +2832,6 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/seed/seedData.js:199",
-        "route": "/api/data",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
         "sourceProject": "multiLocationFranchise",
         "path": "backend/src/routes/financial.js:13",
         "route": "/data",
@@ -3214,6 +2843,13 @@
         "path": "backend/src/routes/financial.js:79",
         "route": "/data",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/seed/seedData.js:199",
+        "route": "/api/data",
+        "originApp": "sales-marketing-crm/review-response-manager"
       }
     ]
   },
@@ -3295,32 +2931,6 @@
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "frontend/src/components/Sidebar.js:13",
         "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Demand Forecast",
-    "canonicalKey": "demand forecast",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/demand-forecast"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:462",
-        "route": "/demand-forecast",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -3534,10 +3144,71 @@
     ]
   },
   {
-    "name": "Extensions",
+    "name": "Evidence",
+    "canonicalKey": "evidence",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/cases/:id/evidence",
+      "/evidence"
+    ],
+    "sourceProjects": [
+      "AIDatabaseAdminAgent",
+      "AIFundraisingCampaignOptimizer",
+      "AIReviewResponseManager",
+      "AISocialProofGenerator",
+      "AITradeShowConferenceROIOptimizer"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/car-dealership-sales-optimizer",
+      "sales-marketing-crm/franchise-performance-benchmarker",
+      "sales-marketing-crm/review-response-manager"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIFundraisingCampaignOptimizer",
+        "path": "server/routes/governedGrants.js:45",
+        "route": "/evidence",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AITradeShowConferenceROIOptimizer",
+        "path": "backend/governance/routerFactory.js:171",
+        "route": "/cases/:id/evidence",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "backend/routes/governedWorkflow.js:87",
+        "route": "/cases/:id/evidence",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:10",
+        "route": "/evidence",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIReviewResponseManager",
+        "path": "backend/src/governance/routerFactory.js:153",
+        "route": "/cases/:id/evidence",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      }
+    ]
+  },
+  {
+    "name": "Extensions Page",
     "canonicalKey": "extension",
     "aliases": [
-      "Extensions Page"
+      "Extensions"
     ],
     "kinds": [
       "page"
@@ -3657,21 +3328,12 @@
       "/FeaturePage"
     ],
     "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker",
-      "referral"
+      "AIFranchisePerformanceBenchmarker"
     ],
     "consolidatedFromApps": [
-      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/pages/FeaturePage.jsx",
-        "route": "/FeaturePage",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
       {
         "kind": "page",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
@@ -3710,11 +3372,8 @@
   {
     "name": "Financial",
     "canonicalKey": "financial",
-    "aliases": [
-      "Financial Record"
-    ],
+    "aliases": [],
     "kinds": [
-      "model",
       "navigation",
       "page"
     ],
@@ -3723,7 +3382,6 @@
       "/financial"
     ],
     "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker",
       "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
@@ -3733,50 +3391,43 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:60",
+        "path": "frontend/src/components/Sidebar.jsx:59",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:161",
+        "path": "frontend/src/App.jsx:153",
         "route": "/financial",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:62",
+        "path": "frontend/src/components/Sidebar.jsx:61",
         "route": "/financial",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:85",
+        "path": "frontend/src/pages/Dashboard.jsx:85",
         "route": "/financial",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:94",
+        "path": "frontend/src/pages/Dashboard.jsx:94",
         "route": "/financial",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Financial.js",
+        "path": "frontend/src/pages/Financial.jsx",
         "route": "/Financial",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/models/FinancialRecord.js",
-        "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -3799,7 +3450,31 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:62",
+        "path": "frontend/src/components/Sidebar.jsx:61",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Financial Record",
+    "canonicalKey": "financial record",
+    "aliases": [],
+    "kinds": [
+      "model"
+    ],
+    "routes": [],
+    "sourceProjects": [
+      "AIFranchisePerformanceBenchmarker"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "model",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/models/FinancialRecord.js",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -3832,14 +3507,14 @@
     ]
   },
   {
-    "name": "Franchise Report",
-    "canonicalKey": "franchise report",
+    "name": "Franchise Portfolio Review",
+    "canonicalKey": "franchise portfolio review",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/franchise-report"
+      "/franchise-portfolio-review"
     ],
     "sourceProjects": [
       "multiLocationFranchise"
@@ -3851,8 +3526,8 @@
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/customViews.js:115",
-        "route": "/franchise-report",
+        "path": "backend/src/routes/runtimeAi.js:6",
+        "route": "/franchise-portfolio-review",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -3900,30 +3575,6 @@
         "kind": "model",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "server/models/FranchiseValuation.js",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Franchise Views",
-    "canonicalKey": "franchise",
-    "aliases": [],
-    "kinds": [
-      "navigation"
-    ],
-    "routes": [],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:87",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -3990,7 +3641,7 @@
   },
   {
     "name": "Gap Limited Cloud Db Integrations No Aws Rds Azure Sql Gcp Cloud",
-    "canonicalKey": "aws azure cloud db gap gcp integrations limited no rds sql",
+    "canonicalKey": "aws azure cloud db gap gcp integration limited no rds sql",
     "aliases": [],
     "kinds": [
       "page"
@@ -4016,7 +3667,7 @@
   },
   {
     "name": "Gap Missing Optimize Query Analyze Slow Queries Recommend Indexe",
-    "canonicalKey": "analyze gap indexe missing optimize queries query recommend slow",
+    "canonicalKey": "analyze gap indexe missing optimize query recommend slow",
     "aliases": [],
     "kinds": [
       "page"
@@ -4069,6 +3720,32 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:169",
         "route": "/gap-no-a-b-testing-framework-for-widget-placement",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Gap No Ab Testing Framework For Widget",
+    "canonicalKey": "ab for framework gap no testing widget",
+    "aliases": [],
+    "kinds": [
+      "page"
+    ],
+    "routes": [
+      "/GapNoABTestingFrameworkForWidget"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/pages/GapNoABTestingFrameworkForWidget.jsx",
+        "route": "/GapNoABTestingFrameworkForWidget",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -4128,32 +3805,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:165",
         "route": "/gap-no-ai-driven-customer-segmentation-for-targeted-testimonial-selection",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Ab Testing Framework For Widget",
-    "canonicalKey": "ab for framework gap no testing widget",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoABTestingFrameworkForWidget"
-    ],
-    "sourceProjects": [
-      "AISocialProofGenerator"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/pages/GapNoABTestingFrameworkForWidget.jsx",
-        "route": "/GapNoABTestingFrameworkForWidget",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -4271,7 +3922,7 @@
   },
   {
     "name": "Gap No Franchise Units Crud Surfaced As",
-    "canonicalKey": "as crud franchise gap no surfaced units",
+    "canonicalKey": "as crud franchise gap no surfaced unit",
     "aliases": [],
     "kinds": [
       "page"
@@ -4299,32 +3950,6 @@
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "client/src/pages/GapNoFranchiseUnitsCrudSurfacedAs.jsx",
         "route": "/GapNoFranchiseUnitsCrudSurfacedAs",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Franchisee Certification Training Lms Backend",
-    "canonicalKey": "backend certification franchisee gap lms no training",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoFranchiseeCertificationTrainingLmsBackend"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoFranchiseeCertificationTrainingLmsBackend.jsx",
-        "route": "/GapNoFranchiseeCertificationTrainingLmsBackend",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -4398,34 +4023,8 @@
     ]
   },
   {
-    "name": "Gap No Franchisee Sentiment Glassdoor Style Analysis",
-    "canonicalKey": "analysis franchisee gap glassdoor no sentiment style",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoFranchiseeSentimentGlassdoorStyleAnalysis"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoFranchiseeSentimentGlassdoorStyleAnalysis.jsx",
-        "route": "/GapNoFranchiseeSentimentGlassdoorStyleAnalysis",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Gap No Integrations With Trustpilot G2 Capterra Review Platforms",
-    "canonicalKey": "capterra g2 gap integrations no review trustpilot with",
+    "canonicalKey": "capterra g2 gap integration no review trustpilot with",
     "aliases": [
       "Gap No Integrations With Trustpilot G2 Capterra Review"
     ],
@@ -4467,32 +4066,6 @@
     ]
   },
   {
-    "name": "Gap No Marketing Spend Attribution AI",
-    "canonicalKey": "ai attribution gap marketing no spend",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoMarketingSpendAttributionAi"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoMarketingSpendAttributionAi.jsx",
-        "route": "/GapNoMarketingSpendAttributionAi",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Gap No Marketing Spend Optimizer Across Unit",
     "canonicalKey": "across gap marketing no optimizer spend unit",
     "aliases": [],
@@ -4522,58 +4095,6 @@
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "client/src/pages/GapNoMarketingSpendOptimizerAcrossUnit.jsx",
         "route": "/GapNoMarketingSpendOptimizerAcrossUnit",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Mobile App For Franchisees",
-    "canonicalKey": "for franchisee gap mobile no",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoMobileAppForFranchisees"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoMobileAppForFranchisees.jsx",
-        "route": "/GapNoMobileAppForFranchisees",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Multi Currency Multi Region Accounting",
-    "canonicalKey": "accounting currency gap multi no region",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoMultiCurrencyMultiRegionAccounting"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoMultiCurrencyMultiRegionAccounting.jsx",
-        "route": "/GapNoMultiCurrencyMultiRegionAccounting",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -4673,34 +4194,8 @@
     ]
   },
   {
-    "name": "Gap No Payments Royalty Collection Automation",
-    "canonicalKey": "automation collection gap no payments royalty",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoPaymentsRoyaltyCollectionAutomation"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoPaymentsRoyaltyCollectionAutomation.jsx",
-        "route": "/GapNoPaymentsRoyaltyCollectionAutomation",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Gap No Predictive Scoring For Which Customers Are",
-    "canonicalKey": "are customers for gap no predictive scoring which",
+    "canonicalKey": "are customer for gap no predictive scoring which",
     "aliases": [],
     "kinds": [
       "page"
@@ -4726,7 +4221,7 @@
   },
   {
     "name": "Gap No Predictive Scoring For Which Customers Are Most",
-    "canonicalKey": "are customers for gap most no predictive scoring which",
+    "canonicalKey": "are customer for gap most no predictive scoring which",
     "aliases": [],
     "kinds": [
       "page"
@@ -4779,32 +4274,6 @@
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "frontend/src/pages/GapNoRealTimeMonitoringAlertingBeyondStubs.js",
         "route": "/GapNoRealTimeMonitoringAlertingBeyondStubs",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Real Time Pos Kpi Ingestion",
-    "canonicalKey": "gap ingestion kpi no pos real time",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoRealTimePosKpiIngestion"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoRealTimePosKpiIngestion.jsx",
-        "route": "/GapNoRealTimePosKpiIngestion",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -4929,58 +4398,6 @@
     ]
   },
   {
-    "name": "Gap No Supply Chain Optimization Across Locations",
-    "canonicalKey": "across chain gap location no optimization supply",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoSupplyChainOptimizationAcrossLocations"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoSupplyChainOptimizationAcrossLocations.jsx",
-        "route": "/GapNoSupplyChainOptimizationAcrossLocations",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Support Ticketing System",
-    "canonicalKey": "gap no support ticketing",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoSupportTicketingSystem"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoSupportTicketingSystem.jsx",
-        "route": "/GapNoSupportTicketingSystem",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Gap No Territory Optimization AI Consolidati",
     "canonicalKey": "ai consolidati gap no optimization territory",
     "aliases": [],
@@ -5049,60 +4466,8 @@
     ]
   },
   {
-    "name": "Gap No Vendor Supplier Marketplace",
-    "canonicalKey": "gap marketplace no supplier vendor",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoVendorSupplierMarketplace"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoVendorSupplierMarketplace.jsx",
-        "route": "/GapNoVendorSupplierMarketplace",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap No Vision Based Brand Compliance Audit",
-    "canonicalKey": "audit based brand compliance gap no vision",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapNoVisionBasedBrandComplianceAudit"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapNoVisionBasedBrandComplianceAudit.jsx",
-        "route": "/GapNoVisionBasedBrandComplianceAudit",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Gap No Webhooks Notifications System For New Review",
-    "canonicalKey": "for gap no notifications review webhooks",
+    "canonicalKey": "for gap no notification review webhook",
     "aliases": [],
     "kinds": [
       "page"
@@ -5128,7 +4493,7 @@
   },
   {
     "name": "Gap No Webhooks Notifications System For New Review Or",
-    "canonicalKey": "for gap no notifications or review webhooks",
+    "canonicalKey": "for gap no notification or review webhook",
     "aliases": [],
     "kinds": [
       "page"
@@ -5155,32 +4520,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:171",
         "route": "/gap-no-webhooks-notifications-system-for-new-review-or",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Gap Strong Coverage Already16 AI Endpoints",
-    "canonicalKey": "ai already16 coverage endpoint gap strong",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GapStrongCoverageAlready16AiEndpoints"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/GapStrongCoverageAlready16AiEndpoints.jsx",
-        "route": "/GapStrongCoverageAlready16AiEndpoints",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -5291,7 +4630,7 @@
   },
   {
     "name": "Generate Variants By Persona",
-    "canonicalKey": "by generate persona variants",
+    "canonicalKey": "by generate persona variant",
     "aliases": [],
     "kinds": [
       "api"
@@ -5342,58 +4681,6 @@
     ]
   },
   {
-    "name": "Goals Page",
-    "canonicalKey": "goals",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/GoalsPage"
-    ],
-    "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/pages/GoalsPage.jsx",
-        "route": "/GoalsPage",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Grade",
-    "canonicalKey": "grade",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/attempts/:id/grade"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/franchiseeLms.js:39",
-        "route": "/attempts/:id/grade",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Guidelines",
     "canonicalKey": "guideline",
     "aliases": [],
@@ -5430,21 +4717,21 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:43",
+        "path": "frontend/src/components/Sidebar.jsx:42",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:125",
+        "path": "frontend/src/App.jsx:117",
         "route": "/brand/guidelines",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:43",
+        "path": "frontend/src/components/Sidebar.jsx:42",
         "route": "/brand/guidelines",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -5498,32 +4785,6 @@
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "backend/routes/agentsNew.js:224",
         "route": "/health-report",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Hedge Recommendation",
-    "canonicalKey": "hedge recommendation",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/hedge-recommendation"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/multiCurrencyRoyalty.js:49",
-        "route": "/hedge-recommendation",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -5734,7 +4995,7 @@
   },
   {
     "name": "Industries Page",
-    "canonicalKey": "industries",
+    "canonicalKey": "industry",
     "aliases": [],
     "kinds": [
       "page"
@@ -5759,27 +5020,36 @@
     ]
   },
   {
-    "name": "Integrations Page",
-    "canonicalKey": "integrations",
+    "name": "Integration Runs",
+    "canonicalKey": "integration runs",
     "aliases": [],
     "kinds": [
-      "page"
+      "api"
     ],
     "routes": [
-      "/IntegrationsPage"
+      "/integration-runs"
     ],
     "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker"
+      "AIFranchisePerformanceBenchmarker",
+      "AIFundraisingCampaignOptimizer"
     ],
     "consolidatedFromApps": [
+      "sales-marketing-crm/car-dealership-sales-optimizer",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
       {
-        "kind": "page",
+        "kind": "api",
+        "sourceProject": "AIFundraisingCampaignOptimizer",
+        "path": "server/routes/governedGrants.js:53",
+        "route": "/integration-runs",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/pages/IntegrationsPage.jsx",
-        "route": "/IntegrationsPage",
+        "path": "server/routes/governedPerformance.js:92",
+        "route": "/integration-runs",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -5813,7 +5083,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/IssueReports.js",
+        "path": "frontend/src/pages/IssueReports.jsx",
         "route": "/IssueReports",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -5844,13 +5114,6 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/codeReviews.js:168",
-        "route": "/:id/issues",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
         "sourceProject": "multiLocationFranchise",
         "path": "backend/src/routes/operations.js:550",
         "route": "/issues",
@@ -5866,30 +5129,37 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:55",
+        "path": "frontend/src/components/Sidebar.jsx:54",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:153",
+        "path": "frontend/src/App.jsx:145",
         "route": "/operations/issues",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:55",
+        "path": "frontend/src/components/Sidebar.jsx:54",
         "route": "/operations/issues",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:103",
+        "path": "frontend/src/pages/Dashboard.jsx:103",
         "route": "/operations/issues",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/codeReviews.js:168",
+        "route": "/:id/issues",
+        "originApp": "sales-marketing-crm/review-response-manager"
       }
     ]
   },
@@ -5950,13 +5220,6 @@
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
-        "kind": "page",
-        "sourceProject": "leads",
-        "path": "components/DashboardLayout.tsx:152",
-        "route": "/knowledge",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
         "path": "backend/src/routes/communication.js:381",
@@ -5973,14 +5236,14 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:177",
+        "path": "frontend/src/App.jsx:169",
         "route": "/knowledge",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:73",
+        "path": "frontend/src/components/Sidebar.jsx:72",
         "route": "/knowledge",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -6049,14 +5312,14 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:73",
+        "path": "frontend/src/components/Sidebar.jsx:72",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/KnowledgeBase.js",
+        "path": "frontend/src/pages/KnowledgeBase.jsx",
         "route": "/KnowledgeBase",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -6066,32 +5329,6 @@
         "path": "frontend/src/pages/KnowledgeBase.jsx",
         "route": "/KnowledgeBase",
         "originApp": "sales-marketing-crm/customer-support-agent"
-      }
-    ]
-  },
-  {
-    "name": "Kpi Dashboard Summary",
-    "canonicalKey": "dashboard kpi summary",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/kpi-dashboard-summary"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:766",
-        "route": "/kpi-dashboard-summary",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
   },
@@ -6115,7 +5352,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:668",
+        "path": "server/index.js:661",
         "route": "/api/ai/labor-cost-optimizer",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -6147,7 +5384,7 @@
   },
   {
     "name": "Limited Cloud Db Integrations No Aws Rds Azure Sql Gcp Cloud",
-    "canonicalKey": "aws azure cloud db gcp integrations limited no rds sql",
+    "canonicalKey": "aws azure cloud db gcp integration limited no rds sql",
     "aliases": [],
     "kinds": [
       "page"
@@ -6172,53 +5409,36 @@
     ]
   },
   {
-    "name": "Location Id",
-    "canonicalKey": "id location",
+    "name": "Live",
+    "canonicalKey": "live",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/report/:locationId"
+      "/api/health/live"
     ],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "multiLocationFranchise",
+      "referral"
     ],
     "consolidatedFromApps": [
+      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/marketingAttribution.js:24",
-        "route": "/report/:locationId",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Location Performance",
-    "canonicalKey": "location performance",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/location-performance"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
+        "sourceProject": "referral",
+        "path": "server/index.js:22",
+        "route": "/api/health/live",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/customViews.js:52",
-        "route": "/location-performance",
+        "path": "backend/src/index.js:103",
+        "route": "/api/health/live",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -6249,49 +5469,49 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/LocationDetail.js",
+        "path": "frontend/src/pages/LocationDetail.jsx",
         "route": "/LocationDetail",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:29",
+        "path": "frontend/src/components/Sidebar.jsx:29",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:31",
+        "path": "frontend/src/components/Sidebar.jsx:31",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:105",
+        "path": "frontend/src/App.jsx:97",
         "route": "/locations",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:31",
+        "path": "frontend/src/components/Sidebar.jsx:31",
         "route": "/locations",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:76",
+        "path": "frontend/src/pages/Dashboard.jsx:76",
         "route": "/locations",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Locations.js",
+        "path": "frontend/src/pages/Locations.jsx",
         "route": "/Locations",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -6433,7 +5653,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/MarketingTemplates.js",
+        "path": "frontend/src/pages/MarketingTemplates.jsx",
         "route": "/MarketingTemplates",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -6465,13 +5685,6 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/ai.ts:1781",
-        "route": "/influencers/match",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIFundraisingCampaignOptimizer",
         "path": "server/routes/peerMatching.js:21",
         "route": "/match",
@@ -6483,6 +5696,13 @@
         "path": "server/routes/volunteers.js:77",
         "route": "/ai/match",
         "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "backend/src/routes/ai.ts:1781",
+        "route": "/influencers/match",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "api",
@@ -6509,15 +5729,21 @@
     ],
     "routes": [
       "/api/auth/me",
+      "/auth/me",
       "/me",
       "/profile/me"
     ],
     "sourceProjects": [
+      "AICarDealershipSalesOptimizer",
       "AIChurnPredictionSystem",
+      "AICompetitiveAnalysisTool",
+      "AIDatabaseAdminAgent",
       "AIFranchisePerformanceBenchmarker",
       "AIFundraisingCampaignOptimizer",
       "AIGrantWriter",
+      "AIReviewResponseManager",
       "AISocialProofGenerator",
+      "AITradeShowConferenceROIOptimizer",
       "AiCodeReviewDocumentation",
       "AiCustomerSupportAgent",
       "aIMarketingAutomation",
@@ -6535,31 +5761,10 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "AIChurnPredictionSystem",
-        "path": "backend/server.js:272",
-        "route": "/api/auth/me",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/auth.ts:129",
+        "sourceProject": "AICarDealershipSalesOptimizer",
+        "path": "backend/routes/auth.js:71",
         "route": "/me",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/auth.ts:158",
-        "route": "/me",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "referral",
-        "path": "server/routes/auth.js:30",
-        "route": "/me",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
       },
       {
         "kind": "api",
@@ -6570,24 +5775,52 @@
       },
       {
         "kind": "api",
-        "sourceProject": "ai-sales-outreach",
-        "path": "backend/src/routes/auth.ts:132",
+        "sourceProject": "AITradeShowConferenceROIOptimizer",
+        "path": "backend/routes/auth.js:51",
         "route": "/me",
         "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
       },
       {
         "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/server.js:366",
-        "route": "/api/auth/me",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "sourceProject": "ai-sales-outreach",
+        "path": "backend/src/routes/auth.ts:148",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
       },
       {
         "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/auth.js:104",
+        "sourceProject": "AIChurnPredictionSystem",
+        "path": "backend/server.js:258",
+        "route": "/api/auth/me",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "backend/src/routes/auth.ts:130",
         "route": "/me",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "backend/src/routes/auth.ts:159",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "referral",
+        "path": "server/routes/auth.js:20",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "backend/routes/auth.js:61",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
@@ -6599,35 +5832,63 @@
       {
         "kind": "api",
         "sourceProject": "AISocialProofGenerator",
-        "path": "backend/routes/auth.js:144",
+        "path": "backend/routes/auth.js:19",
         "route": "/me",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/auth.js:193",
+        "path": "backend/src/routes/auth.js:161",
         "route": "/me",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/users.js:269",
+        "path": "backend/src/routes/users.js:314",
         "route": "/profile/me",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/users.js:294",
+        "path": "backend/src/routes/users.js:333",
         "route": "/profile/me",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "backend/routes/index.js:23",
+        "route": "/auth/me",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/server.js:366",
+        "route": "/api/auth/me",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIReviewResponseManager",
+        "path": "backend/src/routes/authRoutes.js:12",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/auth.js:107",
+        "route": "/me",
+        "originApp": "sales-marketing-crm/review-response-manager"
       },
       {
         "kind": "api",
         "sourceProject": "AiCustomerSupportAgent",
-        "path": "backend/src/routes/auth.js:120",
+        "path": "backend/src/routes/auth.js:124",
         "route": "/me",
         "originApp": "sales-marketing-crm/customer-support-agent"
       }
@@ -6685,7 +5946,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:338",
+        "path": "server/index.js:331",
         "route": "/api/ai/chat/sessions/:session_id/messages",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -6713,28 +5974,28 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:72",
+        "path": "frontend/src/components/Sidebar.jsx:71",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:173",
+        "path": "frontend/src/App.jsx:165",
         "route": "/messages",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:72",
+        "path": "frontend/src/components/Sidebar.jsx:71",
         "route": "/messages",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Messages.js",
+        "path": "frontend/src/pages/Messages.jsx",
         "route": "/Messages",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -6749,7 +6010,7 @@
   },
   {
     "name": "Missing Optimize Query Analyze Slow Queries Recommend Indexe",
-    "canonicalKey": "analyze indexe missing optimize queries query recommend slow",
+    "canonicalKey": "analyze indexe missing optimize query recommend slow",
     "aliases": [],
     "kinds": [
       "page"
@@ -6774,8 +6035,34 @@
     ]
   },
   {
+    "name": "Moderation Decisions",
+    "canonicalKey": "decision moderation",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/versions/:id/moderation-decisions"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:18",
+        "route": "/versions/:id/moderation-decisions",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
     "name": "Multi Modal Proof Widgets Combining Video Audio",
-    "canonicalKey": "audio combining modal multi proof video widgets",
+    "canonicalKey": "audio combining modal multi proof video widget",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -6949,7 +6236,7 @@
   },
   {
     "name": "No Integrations With Trustpilot G2 Capterra Revi",
-    "canonicalKey": "capterra g2 integrations no revi trustpilot with",
+    "canonicalKey": "capterra g2 integration no revi trustpilot with",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -6999,7 +6286,7 @@
   },
   {
     "name": "No Predictive Scoring For Which Customers Are Most",
-    "canonicalKey": "are customers for most no predictive scoring which",
+    "canonicalKey": "are customer for most no predictive scoring which",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -7099,7 +6386,7 @@
   },
   {
     "name": "No Webhooks Notifications System For New Review Or",
-    "canonicalKey": "for no notifications or review webhooks",
+    "canonicalKey": "for no notification or review webhook",
     "aliases": [],
     "kinds": [
       "navigation"
@@ -7117,58 +6404,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:171",
         "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Offers",
-    "canonicalKey": "offer",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/offers"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/vendorMarketplace.js:35",
-        "route": "/offers",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Onboarding Checklist",
-    "canonicalKey": "checklist onboarding",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/onboarding-checklist"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:858",
-        "route": "/onboarding-checklist",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -7192,30 +6427,6 @@
         "kind": "navigation",
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:163",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Opening Readiness",
-    "canonicalKey": "opening readiness",
-    "aliases": [],
-    "kinds": [
-      "navigation"
-    ],
-    "routes": [],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:32",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -7250,7 +6461,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/OperationalChecklists.js",
+        "path": "frontend/src/pages/OperationalChecklists.jsx",
         "route": "/OperationalChecklists",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -7265,6 +6476,7 @@
       "page"
     ],
     "routes": [
+      "/Operations",
       "/codex/operations"
     ],
     "sourceProjects": [
@@ -7295,27 +6507,6 @@
     "evidence": [
       {
         "kind": "page",
-        "sourceProject": "AIChurnPredictionSystem",
-        "path": "frontend/src/App.js:2792",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "frontend/src/App.tsx:61",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/App.jsx:48",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
         "sourceProject": "AICarDealershipSalesOptimizer",
         "path": "frontend/src/App.js:71",
         "route": "/codex/operations",
@@ -7344,8 +6535,57 @@
       },
       {
         "kind": "page",
+        "sourceProject": "AIChurnPredictionSystem",
+        "path": "frontend/src/App.js:2792",
+        "route": "/codex/operations",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "frontend/src/App.tsx:61",
+        "route": "/codex/operations",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "referral",
+        "path": "client/src/pages/Operations.jsx",
+        "route": "/Operations",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIDatabaseAdminAgent",
+        "path": "frontend/src/App.js:46",
+        "route": "/codex/operations",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "client/src/App.jsx:71",
+        "route": "/codex/operations",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/App.jsx:81",
+        "route": "/codex/operations",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/components/Sidebar.jsx:49",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
         "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "frontend/src/App.js:49",
+        "path": "frontend/src/App.js:39",
         "route": "/codex/operations",
         "originApp": "sales-marketing-crm/review-response-manager"
       },
@@ -7372,45 +6612,44 @@
       },
       {
         "kind": "page",
-        "sourceProject": "AIDatabaseAdminAgent",
-        "path": "frontend/src/App.js:46",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/App.jsx:71",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/App.jsx:81",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:50",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:94",
-        "route": "/codex/operations",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
         "sourceProject": "AiCustomerSupportAgent",
         "path": "frontend/src/App.jsx:99",
         "route": "/codex/operations",
         "originApp": "sales-marketing-crm/customer-support-agent"
+      }
+    ]
+  },
+  {
+    "name": "Outcomes",
+    "canonicalKey": "outcome",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/publication-jobs/:id/outcomes",
+      "/render-jobs/:id/outcomes"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:16",
+        "route": "/render-jobs/:id/outcomes",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:21",
+        "route": "/publication-jobs/:id/outcomes",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
   },
@@ -7477,23 +6716,14 @@
     "sourceProjects": [
       "AIFundraisingCampaignOptimizer",
       "AiCustomerSupportAgent",
-      "multiLocationFranchise",
-      "referral"
+      "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/car-dealership-sales-optimizer",
-      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/customer-support-agent",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "referral",
-        "path": "client/src/components/Sidebar.jsx:6",
-        "route": "",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
       {
         "kind": "api",
         "sourceProject": "AIFundraisingCampaignOptimizer",
@@ -7511,7 +6741,7 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:23",
+        "path": "frontend/src/components/Sidebar.jsx:23",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -7528,32 +6758,6 @@
         "path": "backend/src/routes/dashboard.js:6",
         "route": "/overview",
         "originApp": "sales-marketing-crm/customer-support-agent"
-      }
-    ]
-  },
-  {
-    "name": "Performance Analysis",
-    "canonicalKey": "analysis performance",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/performance-analysis"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:312",
-        "route": "/performance-analysis",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
   },
@@ -7832,62 +7036,6 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-backend-is-monolithic-no-routes-folder.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-e-signature-integration-for-proposal.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-file-upload-pipeline-for-supporting.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-proposal-style-consistency-enforcer-a.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-real-time-collaboration-on-proposals.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-real-time-funder-deadline-change.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-rejection-reason-classifier-for-past.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/routes/gap-no-webhook-receivers-for-grant-portal.js:25",
-        "route": "pool",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "server/routes/gap-no-franchise-units-crud-surfaced-as.js:25",
         "route": "pool",
@@ -7948,6 +7096,62 @@
         "path": "server/routes/gap-no-vendor-contract-management.js:25",
         "route": "pool",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-backend-is-monolithic-no-routes-folder.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-e-signature-integration-for-proposal.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-file-upload-pipeline-for-supporting.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-proposal-style-consistency-enforcer-a.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-real-time-collaboration-on-proposals.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-real-time-funder-deadline-change.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-rejection-reason-classifier-for-past.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/routes/gap-no-webhook-receivers-for-grant-portal.js:25",
+        "route": "pool",
+        "originApp": "sales-marketing-crm/review-response-manager"
       }
     ]
   },
@@ -7997,7 +7201,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:552",
+        "path": "server/index.js:545",
         "route": "/api/ai/predictive-closure",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -8131,13 +7335,6 @@
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
-        "kind": "page",
-        "sourceProject": "leads",
-        "path": "components/DashboardLayout.tsx:119",
-        "route": "/products",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
         "kind": "api",
         "sourceProject": "multiLocationFranchise",
         "path": "backend/src/routes/metadata.js:92",
@@ -8147,28 +7344,28 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:37",
+        "path": "frontend/src/components/Sidebar.jsx:36",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:121",
+        "path": "frontend/src/App.jsx:113",
         "route": "/products",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:37",
+        "path": "frontend/src/components/Sidebar.jsx:36",
         "route": "/products",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Products.js",
+        "path": "frontend/src/pages/Products.jsx",
         "route": "/Products",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -8221,15 +7418,22 @@
     "evidence": [
       {
         "kind": "api",
+        "sourceProject": "AIFundraisingCampaignOptimizer",
+        "path": "server/routes/donors.js:116",
+        "route": "/ai/profile",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
+      {
+        "kind": "api",
         "sourceProject": "AIChurnPredictionSystem",
-        "path": "backend/server.js:467",
+        "path": "backend/server.js:453",
         "route": "/api/auth/profile",
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "api",
         "sourceProject": "AIChurnPredictionSystem",
-        "path": "backend/server.js:480",
+        "path": "backend/server.js:466",
         "route": "/api/auth/profile",
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
@@ -8248,11 +7452,39 @@
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/App.jsx:95",
+        "route": "/profile",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/pages/Profile.jsx",
+        "route": "/Profile",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
         "kind": "api",
-        "sourceProject": "AIFundraisingCampaignOptimizer",
-        "path": "server/routes/donors.js:116",
-        "route": "/ai/profile",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+        "sourceProject": "multiLocationFranchise",
+        "path": "backend/src/routes/auth.js:186",
+        "route": "/profile",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/App.jsx:177",
+        "route": "/profile",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/pages/Profile.jsx",
+        "route": "/Profile",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
@@ -8264,7 +7496,7 @@
       {
         "kind": "api",
         "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "backend/routes/index.js:23",
+        "path": "backend/routes/index.js:24",
         "route": "/auth/profile",
         "originApp": "sales-marketing-crm/review-response-manager"
       },
@@ -8295,40 +7527,31 @@
         "path": "frontend/src/pages/Profile.jsx",
         "route": "/Profile",
         "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/App.jsx:95",
-        "route": "/profile",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/pages/Profile.jsx",
-        "route": "/Profile",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Projects",
+    "canonicalKey": "project",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/projects"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
       {
         "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/auth.js:224",
-        "route": "/profile",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:193",
-        "route": "/profile",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Profile.js",
-        "route": "/Profile",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:13",
+        "route": "/projects",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -8358,37 +7581,79 @@
     ]
   },
   {
-    "name": "Publish",
-    "canonicalKey": "publish",
+    "name": "Provider Usage",
+    "canonicalKey": "provider usage",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/:id/publish",
-      "/publish"
+      "/provider-usage"
     ],
     "sourceProjects": [
-      "AISocialProofGenerator",
-      "aIMarketingAutomation"
+      "AISocialProofGenerator"
     ],
     "consolidatedFromApps": [
-      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/landingPages.ts:155",
-        "route": "/:id/publish",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:22",
+        "route": "/provider-usage",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Publication Jobs",
+    "canonicalKey": "jobs publication",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/projects/:id/publication-jobs"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
       {
         "kind": "api",
         "sourceProject": "AISocialProofGenerator",
-        "path": "backend/routes/marketplacePublishing.js:54",
-        "route": "/publish",
+        "path": "backend/routes/governedProof.js:20",
+        "route": "/projects/:id/publication-jobs",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Quality Evaluations",
+    "canonicalKey": "evaluation quality",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/versions/:id/quality-evaluations"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:17",
+        "route": "/versions/:id/quality-evaluations",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -8499,7 +7764,7 @@
       {
         "kind": "api",
         "sourceProject": "AIDatabaseAdminAgent",
-        "path": "backend/routes/queryOptimize.js:58",
+        "path": "backend/routes/queryOptimize.js:59",
         "route": "/query-optimize",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -8527,32 +7792,6 @@
         "sourceProject": "AIDatabaseAdminAgent",
         "path": "backend/routes/customViews.js:46",
         "route": "/query-performance",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Rates",
-    "canonicalKey": "rate",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/rates"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/multiCurrencyRoyalty.js:26",
-        "route": "/rates",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -8597,13 +7836,6 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AiCodeReviewDocumentation",
-        "path": "backend/src/routes/notifications.js:90",
-        "route": "/:id/read",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
         "path": "server/routes/extensions.js:301",
         "route": "/messages/:id/read",
@@ -8615,21 +7847,28 @@
         "path": "backend/src/routes/communication.js:321",
         "route": "/messages/:id/read",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AiCodeReviewDocumentation",
+        "path": "backend/src/routes/notifications.js:90",
+        "route": "/:id/read",
+        "originApp": "sales-marketing-crm/review-response-manager"
       }
     ]
   },
   {
-    "name": "Region Heatmap",
-    "canonicalKey": "heatmap region",
+    "name": "Readiness",
+    "canonicalKey": "readiness",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/region-heatmap"
+      "/providers/readiness"
     ],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "AISocialProofGenerator"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
@@ -8637,9 +7876,44 @@
     "evidence": [
       {
         "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:9",
+        "route": "/providers/readiness",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Ready",
+    "canonicalKey": "ready",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/api/health/ready"
+    ],
+    "sourceProjects": [
+      "multiLocationFranchise",
+      "referral"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/churn-prediction-system",
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "referral",
+        "path": "server/index.js:23",
+        "route": "/api/health/ready",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
         "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/customViews.js:83",
-        "route": "/region-heatmap",
+        "path": "backend/src/index.js:104",
+        "route": "/api/health/ready",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -8671,17 +7945,17 @@
     ]
   },
   {
-    "name": "Register Device",
-    "canonicalKey": "device register",
+    "name": "Render Jobs",
+    "canonicalKey": "jobs render",
     "aliases": [],
     "kinds": [
       "api"
     ],
     "routes": [
-      "/register-device"
+      "/versions/:id/render-jobs"
     ],
     "sourceProjects": [
-      "multiLocationFranchise"
+      "AISocialProofGenerator"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/franchise-performance-benchmarker"
@@ -8689,9 +7963,9 @@
     "evidence": [
       {
         "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/mobileBriefing.js:34",
-        "route": "/register-device",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:15",
+        "route": "/versions/:id/render-jobs",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -8788,6 +8062,9 @@
       "/ReviewDetail",
       "/Reviews",
       "/ai/review",
+      "/call-analyses/:id/review",
+      "/handoffs/:id/review",
+      "/outreach/:id/review",
       "/pdf/reviews",
       "/review-platforms",
       "/reviews"
@@ -8797,15 +8074,26 @@
       "AIReviewResponseManager",
       "AISocialProofGenerator",
       "AiCodeReviewDocumentation",
-      "aIMarketingAutomation"
+      "AiCustomerSupportAgent",
+      "aIMarketingAutomation",
+      "multiLocationFranchise",
+      "referral"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/car-dealership-sales-optimizer",
       "sales-marketing-crm/churn-prediction-system",
+      "sales-marketing-crm/customer-support-agent",
       "sales-marketing-crm/franchise-performance-benchmarker",
       "sales-marketing-crm/review-response-manager"
     ],
     "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AIFundraisingCampaignOptimizer",
+        "path": "server/routes/grants.js:109",
+        "route": "/ai/review",
+        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+      },
       {
         "kind": "api",
         "sourceProject": "aIMarketingAutomation",
@@ -8836,10 +8124,73 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AIFundraisingCampaignOptimizer",
-        "path": "server/routes/grants.js:109",
-        "route": "/ai/review",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
+        "sourceProject": "referral",
+        "path": "server/routes/workflow.js:123",
+        "route": "/handoffs/:id/review",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "referral",
+        "path": "server/routes/workflow.js:132",
+        "route": "/outreach/:id/review",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/components/Navbar.jsx:12",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/components/Sidebar.jsx:42",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/App.jsx:119",
+        "route": "/reviews",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/components/Navbar.jsx:12",
+        "route": "/reviews",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/components/Sidebar.jsx:41",
+        "route": "/reviews",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/pages/Dashboard.jsx:67",
+        "route": "/reviews",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "frontend/src/pages/Reviews.jsx",
+        "route": "/Reviews",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "multiLocationFranchise",
+        "path": "backend/src/routes/revenue.js:280",
+        "route": "/outreach/:id/review",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
@@ -8898,53 +8249,11 @@
         "originApp": "sales-marketing-crm/review-response-manager"
       },
       {
-        "kind": "navigation",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/components/Navbar.jsx:12",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/components/Sidebar.jsx:42",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/App.jsx:119",
-        "route": "/reviews",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/components/Navbar.jsx:12",
-        "route": "/reviews",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/components/Sidebar.jsx:41",
-        "route": "/reviews",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/pages/Dashboard.jsx:67",
-        "route": "/reviews",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AISocialProofGenerator",
-        "path": "frontend/src/pages/Reviews.jsx",
-        "route": "/Reviews",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+        "kind": "api",
+        "sourceProject": "AiCustomerSupportAgent",
+        "path": "backend/src/routes/authoritative.js:83",
+        "route": "/call-analyses/:id/review",
+        "originApp": "sales-marketing-crm/customer-support-agent"
       }
     ]
   },
@@ -8986,62 +8295,36 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:64",
+        "path": "frontend/src/components/Sidebar.jsx:63",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:165",
+        "path": "frontend/src/App.jsx:157",
         "route": "/financial/royalties",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:64",
+        "path": "frontend/src/components/Sidebar.jsx:63",
         "route": "/financial/royalties",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:133",
+        "path": "frontend/src/pages/Dashboard.jsx:133",
         "route": "/financial/royalties",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Royalties.js",
+        "path": "frontend/src/pages/Royalties.jsx",
         "route": "/Royalties",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Royalty Forecast",
-    "canonicalKey": "forecast royalty",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/royalty-forecast"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:729",
-        "route": "/royalty-forecast",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -9255,6 +8538,58 @@
     ]
   },
   {
+    "name": "Segmentation Runs",
+    "canonicalKey": "runs segmentation",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/segmentation-runs"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:11",
+        "route": "/segmentation-runs",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Selections",
+    "canonicalKey": "selection",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/segmentation-runs/:id/selections"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedProof.js:12",
+        "route": "/segmentation-runs/:id/selections",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
     "name": "Sent",
     "canonicalKey": "sent",
     "aliases": [],
@@ -9300,41 +8635,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "frontend/src/components/Sidebar.jsx:159",
         "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Settings Page",
-    "canonicalKey": "settings",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/SettingsPage"
-    ],
-    "sourceProjects": [
-      "AICarDealershipSalesOptimizer",
-      "AIFranchisePerformanceBenchmarker"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/car-dealership-sales-optimizer",
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AICarDealershipSalesOptimizer",
-        "path": "frontend/src/pages/SettingsPage.js",
-        "route": "/SettingsPage",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/pages/SettingsPage.jsx",
-        "route": "/SettingsPage",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -9410,14 +8710,14 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:52",
+        "path": "frontend/src/components/Sidebar.jsx:51",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/SOPs.js",
+        "path": "frontend/src/pages/SOPs.jsx",
         "route": "/SOPs",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -9570,41 +8870,15 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:141",
+        "path": "frontend/src/App.jsx:133",
         "route": "/operations/sops",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:52",
+        "path": "frontend/src/components/Sidebar.jsx:51",
         "route": "/operations/sops",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Spend",
-    "canonicalKey": "spend",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/spend"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/marketingAttribution.js:10",
-        "route": "/spend",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -9634,42 +8908,6 @@
     ]
   },
   {
-    "name": "Start",
-    "canonicalKey": "start",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/:id/start",
-      "/attempts/start"
-    ],
-    "sourceProjects": [
-      "ai-sales-outreach",
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/car-dealership-sales-optimizer",
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "ai-sales-outreach",
-        "path": "backend/src/routes/campaigns.ts:254",
-        "route": "/:id/start",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/franchiseeLms.js:21",
-        "route": "/attempts/start",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Stats",
     "canonicalKey": "stat",
     "aliases": [],
@@ -9694,8 +8932,7 @@
       "AiCustomerSupportAgent",
       "aIMarketingAutomation",
       "ai-sales-outreach",
-      "multiLocationFranchise",
-      "referral"
+      "multiLocationFranchise"
     ],
     "consolidatedFromApps": [
       "sales-marketing-crm/car-dealership-sales-optimizer",
@@ -9705,27 +8942,6 @@
       "sales-marketing-crm/review-response-manager"
     ],
     "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "AIChurnPredictionSystem",
-        "path": "backend/server.js:2080",
-        "route": "/api/dashboard/stats",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/reviews.ts:45",
-        "route": "/stats",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "referral",
-        "path": "server/routes/dashboard.js:6",
-        "route": "/stats",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
       {
         "kind": "api",
         "sourceProject": "AITradeShowConferenceROIOptimizer",
@@ -9742,36 +8958,29 @@
       },
       {
         "kind": "api",
-        "sourceProject": "AICompetitiveAnalysisTool",
-        "path": "backend/routes/index.js:27",
-        "route": "/dashboard/stats",
-        "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIGrantWriter",
-        "path": "backend/server.js:377",
+        "sourceProject": "AIChurnPredictionSystem",
+        "path": "backend/server.js:2080",
         "route": "/api/dashboard/stats",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "api",
-        "sourceProject": "AIReviewResponseManager",
-        "path": "backend/src/routes/reviewRoutes.js:10",
+        "sourceProject": "aIMarketingAutomation",
+        "path": "backend/src/routes/reviews.ts:45",
         "route": "/stats",
-        "originApp": "sales-marketing-crm/review-response-manager"
+        "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
         "kind": "api",
         "sourceProject": "AIDatabaseAdminAgent",
-        "path": "backend/server.js:48",
+        "path": "backend/server.js:53",
         "route": "/api/stats",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:766",
+        "path": "server/index.js:759",
         "route": "/api/dashboard/stats",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
@@ -9788,6 +8997,27 @@
         "path": "backend/src/routes/financial.js:587",
         "route": "/stats",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AICompetitiveAnalysisTool",
+        "path": "backend/routes/index.js:28",
+        "route": "/dashboard/stats",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIGrantWriter",
+        "path": "backend/server.js:377",
+        "route": "/api/dashboard/stats",
+        "originApp": "sales-marketing-crm/review-response-manager"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "AIReviewResponseManager",
+        "path": "backend/src/routes/reviewRoutes.js:12",
+        "route": "/stats",
+        "originApp": "sales-marketing-crm/review-response-manager"
       },
       {
         "kind": "api",
@@ -9825,47 +9055,6 @@
     ]
   },
   {
-    "name": "Store Opening Readiness",
-    "canonicalKey": "opening readiness store",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/StoreOpeningReadiness",
-      "/store-opening-readiness"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:200",
-        "route": "/store-opening-readiness",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:32",
-        "route": "/store-opening-readiness",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/StoreOpeningReadiness.js",
-        "route": "/StoreOpeningReadiness",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
     "name": "Stream",
     "canonicalKey": "stream",
     "aliases": [],
@@ -9895,34 +9084,8 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:243",
+        "path": "server/index.js:236",
         "route": "/api/ai/chat/stream",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Submit Answer",
-    "canonicalKey": "answer submit",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/attempts/:id/submit-answer"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/franchiseeLms.js:30",
-        "route": "/attempts/:id/submit-answer",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -10094,21 +9257,21 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:74",
+        "path": "frontend/src/components/Sidebar.jsx:73",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:181",
+        "path": "frontend/src/App.jsx:173",
         "route": "/support",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:74",
+        "path": "frontend/src/components/Sidebar.jsx:73",
         "route": "/support",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -10143,79 +9306,8 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/SupportTickets.js",
+        "path": "frontend/src/pages/SupportTickets.jsx",
         "route": "/SupportTickets",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Sync",
-    "canonicalKey": "sync",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/:id/sync",
-      "/pos/sync"
-    ],
-    "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker",
-      "aIMarketingAutomation",
-      "ai-sales-outreach"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/car-dealership-sales-optimizer",
-      "sales-marketing-crm/churn-prediction-system",
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "aIMarketingAutomation",
-        "path": "backend/src/routes/integrations.ts:174",
-        "route": "/:id/sync",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "ai-sales-outreach",
-        "path": "backend/src/routes/integrations.ts:157",
-        "route": "/:id/sync",
-        "originApp": "sales-marketing-crm/car-dealership-sales-optimizer"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/routes/extensions.js:114",
-        "route": "/pos/sync",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Territorial Dispute Resolution",
-    "canonicalKey": "dispute resolution territorial",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/territorial-dispute-resolution"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:815",
-        "route": "/territorial-dispute-resolution",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -10249,37 +9341,30 @@
         "originApp": "sales-marketing-crm/churn-prediction-system"
       },
       {
-        "kind": "page",
-        "sourceProject": "leads",
-        "path": "components/DashboardLayout.tsx:138",
-        "route": "/territories",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:35",
+        "path": "frontend/src/components/Sidebar.jsx:34",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:117",
+        "path": "frontend/src/App.jsx:109",
         "route": "/territories",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:35",
+        "path": "frontend/src/components/Sidebar.jsx:34",
         "route": "/territories",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Territories.js",
+        "path": "frontend/src/pages/Territories.jsx",
         "route": "/Territories",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -10307,6 +9392,32 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "backend/routes/customViews.js:38",
         "route": "/testimonial-collection-chart",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      }
+    ]
+  },
+  {
+    "name": "Testimonial Draft",
+    "canonicalKey": "draft testimonial",
+    "aliases": [],
+    "kinds": [
+      "api"
+    ],
+    "routes": [
+      "/testimonial-draft"
+    ],
+    "sourceProjects": [
+      "AISocialProofGenerator"
+    ],
+    "consolidatedFromApps": [
+      "sales-marketing-crm/franchise-performance-benchmarker"
+    ],
+    "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "AISocialProofGenerator",
+        "path": "backend/routes/governedGeneration.js:11",
+        "route": "/testimonial-draft",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -10440,42 +9551,12 @@
       "/testimonials"
     ],
     "sourceProjects": [
-      "AISocialProofGenerator",
-      "referral"
+      "AISocialProofGenerator"
     ],
     "consolidatedFromApps": [
-      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/franchise-performance-benchmarker"
     ],
     "evidence": [
-      {
-        "kind": "navigation",
-        "sourceProject": "referral",
-        "path": "client/src/components/Sidebar.jsx:93",
-        "route": "",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/App.jsx:70",
-        "route": "/testimonials",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/components/Sidebar.jsx:93",
-        "route": "/testimonials",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "referral",
-        "path": "client/src/pages/Dashboard.jsx:14",
-        "route": "/testimonials",
-        "originApp": "sales-marketing-crm/churn-prediction-system"
-      },
       {
         "kind": "navigation",
         "sourceProject": "AISocialProofGenerator",
@@ -10590,48 +9671,22 @@
       {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:46",
+        "path": "frontend/src/components/Sidebar.jsx:45",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:137",
+        "path": "frontend/src/App.jsx:129",
         "route": "/brand/training",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:46",
+        "path": "frontend/src/components/Sidebar.jsx:45",
         "route": "/brand/training",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Training Assistant",
-    "canonicalKey": "assistant training",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/training-assistant"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:538",
-        "route": "/training-assistant",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -10665,7 +9720,7 @@
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/TrainingMaterials.js",
+        "path": "frontend/src/pages/TrainingMaterials.jsx",
         "route": "/TrainingMaterials",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -10739,7 +9794,7 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:481",
+        "path": "server/index.js:474",
         "route": "/api/ai/unit-rank",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -10811,6 +9866,7 @@
       "User Detail"
     ],
     "kinds": [
+      "api",
       "model",
       "navigation",
       "page"
@@ -10824,14 +9880,72 @@
       "AIFranchisePerformanceBenchmarker",
       "AiCodeReviewDocumentation",
       "AiCustomerSupportAgent",
-      "multiLocationFranchise"
+      "multiLocationFranchise",
+      "referral"
     ],
     "consolidatedFromApps": [
+      "sales-marketing-crm/churn-prediction-system",
       "sales-marketing-crm/customer-support-agent",
       "sales-marketing-crm/franchise-performance-benchmarker",
       "sales-marketing-crm/review-response-manager"
     ],
     "evidence": [
+      {
+        "kind": "api",
+        "sourceProject": "referral",
+        "path": "server/routes/workflow.js:24",
+        "route": "/users",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "api",
+        "sourceProject": "referral",
+        "path": "server/routes/workflow.js:29",
+        "route": "/users",
+        "originApp": "sales-marketing-crm/churn-prediction-system"
+      },
+      {
+        "kind": "model",
+        "sourceProject": "AIFranchisePerformanceBenchmarker",
+        "path": "server/models/User.js",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "navigation",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/components/Sidebar.jsx:33",
+        "route": "",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/App.jsx:105",
+        "route": "/users",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/components/Sidebar.jsx:33",
+        "route": "/users",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/pages/Dashboard.jsx:142",
+        "route": "/users",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
+      {
+        "kind": "page",
+        "sourceProject": "multiLocationFranchise",
+        "path": "frontend/src/pages/Users.jsx",
+        "route": "/Users",
+        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
+      },
       {
         "kind": "page",
         "sourceProject": "AiCodeReviewDocumentation",
@@ -10845,48 +9959,6 @@
         "path": "frontend/src/pages/Documentation.jsx:89",
         "route": "/users",
         "originApp": "sales-marketing-crm/review-response-manager"
-      },
-      {
-        "kind": "model",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/models/User.js",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "navigation",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:34",
-        "route": "",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:113",
-        "route": "/users",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:34",
-        "route": "/users",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Dashboard.js:142",
-        "route": "/users",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "page",
-        "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/pages/Users.js",
-        "route": "/Users",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
@@ -10932,37 +10004,23 @@
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/vendorMarketplace.js:16",
-        "route": "/vendors",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/vendorMarketplace.js:9",
-        "route": "/vendors",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      },
-      {
         "kind": "navigation",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:45",
+        "path": "frontend/src/components/Sidebar.jsx:44",
         "route": "",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/App.js:133",
+        "path": "frontend/src/App.jsx:125",
         "route": "/brand/vendors",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       },
       {
         "kind": "page",
         "sourceProject": "multiLocationFranchise",
-        "path": "frontend/src/components/Sidebar.js:45",
+        "path": "frontend/src/components/Sidebar.jsx:44",
         "route": "/brand/vendors",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
@@ -11069,34 +10127,8 @@
       {
         "kind": "api",
         "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "server/index.js:463",
+        "path": "server/index.js:456",
         "route": "/api/goals/:id/weekly-narrative",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "White Label Analytics Summary",
-    "canonicalKey": "analytics label summary white",
-    "aliases": [],
-    "kinds": [
-      "api"
-    ],
-    "routes": [
-      "/white-label-analytics-summary"
-    ],
-    "sourceProjects": [
-      "multiLocationFranchise"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "api",
-        "sourceProject": "multiLocationFranchise",
-        "path": "backend/src/routes/ai.js:893",
-        "route": "/white-label-analytics-summary",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]
@@ -11205,32 +10237,6 @@
         "sourceProject": "AISocialProofGenerator",
         "path": "backend/routes/customViews.js:172",
         "route": "/widget-rules",
-        "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
-      }
-    ]
-  },
-  {
-    "name": "Workflows Page",
-    "canonicalKey": "workflows",
-    "aliases": [],
-    "kinds": [
-      "page"
-    ],
-    "routes": [
-      "/WorkflowsPage"
-    ],
-    "sourceProjects": [
-      "AIFranchisePerformanceBenchmarker"
-    ],
-    "consolidatedFromApps": [
-      "sales-marketing-crm/franchise-performance-benchmarker"
-    ],
-    "evidence": [
-      {
-        "kind": "page",
-        "sourceProject": "AIFranchisePerformanceBenchmarker",
-        "path": "client/src/pages/WorkflowsPage.jsx",
-        "route": "/WorkflowsPage",
         "originApp": "sales-marketing-crm/franchise-performance-benchmarker"
       }
     ]

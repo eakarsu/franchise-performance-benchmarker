@@ -11,10 +11,10 @@
     "AISocialProofGenerator",
     "multiLocationFranchise"
   ],
-  "featureCount": 309,
-  "candidateFeatureCount": 395,
-  "eliminatedSimilarFeatures": 86,
-  "evidenceCount": 725,
+  "featureCount": 273,
+  "candidateFeatureCount": 366,
+  "eliminatedSimilarFeatures": 93,
+  "evidenceCount": 680,
   "aiPageCount": 0,
   "sourceAIPageCount": 0,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
@@ -25,6 +25,6 @@
     "seededTables": 9,
     "seededRows": 138
   },
-  "visibleFeatureCount": 31,
+  "visibleFeatureCount": 32,
   "featureVisibilityMode": "seeded-or-ai"
 }
