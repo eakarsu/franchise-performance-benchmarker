@@ -11,12 +11,12 @@
     "AISocialProofGenerator",
     "multiLocationFranchise"
   ],
-  "featureCount": 273,
-  "candidateFeatureCount": 366,
+  "featureCount": 275,
+  "candidateFeatureCount": 368,
   "eliminatedSimilarFeatures": 93,
-  "evidenceCount": 680,
-  "aiPageCount": 0,
-  "sourceAIPageCount": 0,
+  "evidenceCount": 677,
+  "aiPageCount": 7,
+  "sourceAIPageCount": 7,
   "featureEvidencePolicy": "Existing source routes, pages, APIs, models, schemas, and navigation only",
   "optimizationPolicy": "Equivalent feature names are consolidated once per industry and assigned to one canonical app owner",
   "database": "database.sqlite",
@@ -25,6 +25,6 @@
     "seededTables": 9,
     "seededRows": 138
   },
-  "visibleFeatureCount": 32,
+  "visibleFeatureCount": 38,
   "featureVisibilityMode": "seeded-or-ai"
 }
