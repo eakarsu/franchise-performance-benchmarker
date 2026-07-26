@@ -3,7 +3,7 @@
 Industry: **Sales, Marketing & CRM**  
 Specialization: **Franchise Performance Benchmarker**
 
-This standalone application consolidates source-backed capabilities into 275 optimized features, including 38 visible data-backed or AI-enabled views. Its public demo SQLite database contains 138 sanitized source rows across 9 imported tables and 120 operational workflow records.
+This standalone application consolidates source-backed capabilities into 275 optimized features, including all 275 source-backed feature views. Its public demo SQLite database contains 138 sanitized source rows across 9 imported tables and 120 operational workflow records.
 
 ## Run locally
 
